@@ -20,16 +20,12 @@ public class RetailStoreCalculator {
         // Calculate the total price before tax and discount
         int totalPriceBeforeTaxAndDiscount = itemPriceCents * quantity;
 
-        // Calculate the sales tax amount
         float salesTaxAmount = totalPriceBeforeTaxAndDiscount * (salesTaxRate / 100);
 
-        // Calculate the discount amount
         float discountAmount = totalPriceBeforeTaxAndDiscount * (discountRate / 100);
 
-        // Calculate the final total price
         double finalTotalPrice = totalPriceBeforeTaxAndDiscount + salesTaxAmount - discountAmount;
 
-        // Print the final total price with two decimal places
         System.out.printf("Final total price: %.2f\n", finalTotalPrice);
 
         scanner.close();
